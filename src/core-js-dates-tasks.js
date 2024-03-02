@@ -157,7 +157,7 @@ function isDateInPeriod(date, period) {
   const dateMsec = new Date(date);
   const startDate = new Date(period.start);
   const endDate = new Date(period.end);
-  console.log(startDate);
+
   return dateMsec >= startDate && dateMsec <= endDate;
 }
 
