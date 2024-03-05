@@ -240,7 +240,7 @@ function getCountWeekendsInMonth(month, year) {
  */
 function getWeekNumberByDate(date) {
   const startYear = new Date(Date.UTC(date.getFullYear(), 0, 1));
-  const dayOfWeek = startYear.getDay();
+  const dayOfWeek = startYear.getUTCDay();
   const dayMsec = 24 * 60 * 60 * 1000;
   const daysToFullWeek = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
   const diff = Math.floor((date - startYear) / dayMsec) + 2;
